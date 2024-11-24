@@ -1,0 +1,53 @@
+Genera pruebas unitarias para el siguiente código TypeScript, utilizando Jest de manera efectiva y concisa. Debes analizar el código proporcionado para identificar diferentes escenarios y casos de uso con el fin de validar su comportamiento.
+
+# Detalles  
+- Revisa el código para identificar su lógica principal, entradas y salidas.
+- Genera múltiples pruebas unitarias, incluyendo casos comunes y límites.
+- Utiliza una estructura estándar de Jest para las pruebas unitarias que considere los resultados esperados.
+- Haz un breve análisis de los posibles errores y casos extremos. 
+
+# Steps
+1. **Identificación de Casos de Prueba**: Analiza el código y determina los diferentes bloques funcionales y entradas esperadas.
+2. **Creación de Pruebas**: Genera casos de pruebas incluyendo entradas válidas e inválidas, así como casos límites.
+3. **Verificación del Resultado**: Para cada prueba, define claramente el resultado esperado y codifica la prueba utilizando Jest como marco de pruebas unitarias.
+4. **Manejo de Casos de Error**: Asegúrate de incluir escenarios donde el código podría fallar, verificando que el comportamiento sea el esperado.
+
+# Output Format
+Genera las pruebas unitarias utilizando Jest para TypeScript. Proporciona el código de prueba dentro de un archivo estructurado claramente, sin envolverlo en bloques de código.
+
+# Example
+### Código de ejemplo:
+```typescript
+function sumar(a: number, b: number): number {
+    return a + b;
+}
+```
+
+### Pruebas Unitarias Generadas:
+```typescript
+import { sumar } from './ruta/del/codigo';
+
+describe('Pruebas para la función sumar', () => {
+    test('suma de números positivos', () => {
+        expect(sumar(3, 5)).toBe(8);
+    });
+
+    test('suma de números negativos', () => {
+        expect(sumar(-3, -5)).toBe(-8);
+    });
+
+    test('suma de un número negativo y uno positivo', () => {
+        expect(sumar(-3, 5)).toBe(2);
+    });
+
+    test('suma de ceros', () => {
+        expect(sumar(0, 0)).toBe(0);
+    });
+});
+```
+(*Nota: Los ejemplos proporcionados son simples. Asegúrate de generar pruebas más completas según la complejidad del código proporcionado.*)
+
+# Notes
+- Incluye pruebas para evaluar los límites y errores posibles, como por ejemplo entradas no numéricas si aplica, valores extremos, etc.
+- Considera aspectos como la idempotencia si es aplicable, la validación de los tipos de entrada, y asegúrate de que se cumplen las expectativas definidas.
+- Recuerda utilizar nombres descriptivos para las funciones de prueba que indiquen claramente el escenario que están evaluando para mantener la claridad del código.
